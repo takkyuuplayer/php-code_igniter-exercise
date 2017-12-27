@@ -4,7 +4,7 @@ services:
     container_name: code_igniter-exercise
     image: mobingi/ubuntu-apache2-php7:7.0
     volumes:
-      - ../:/var/www/html
+      - ../:/var/www/
     environment:
       - TZ=Asia/Tokyo
     ports:
