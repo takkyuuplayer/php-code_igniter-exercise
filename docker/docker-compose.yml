@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    container_name: code_igniter-exercise
+    image: mobingi/ubuntu-apache2-php7:7.0
+    volumes:
+      - ../:/var/www/html
+    environment:
+      - TZ=Asia/Tokyo
+    ports:
+      - 10080:80
+  mysql:
+    container_name: mysql
+    image: mysql
+    environment:
+      - TZ=Asia/Tokyo
