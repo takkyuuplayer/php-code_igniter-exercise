@@ -9,8 +9,10 @@ services:
       - TZ=Asia/Tokyo
     ports:
       - 10080:80
+    links:
+      - mysql
   mysql:
-    container_name: mysql
     image: mysql
     environment:
       - TZ=Asia/Tokyo
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
