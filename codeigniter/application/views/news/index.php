@@ -8,3 +8,4 @@
         <p><a href="<?php echo site_url('news/'.$news_item['slug']); ?>">View article</a></p>
 
 <?php endforeach; ?>
+<?php echo anchor('news/create', 'Create new entry'); ?>
