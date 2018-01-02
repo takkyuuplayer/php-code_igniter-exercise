@@ -6,4 +6,9 @@ class Tools extends CI_Controller
     {
         echo "Hello {$to}!".PHP_EOL;
     }
+
+    public function environment()
+    {
+        echo "Working on " . ENVIRONMENT . " environment\n";
+    }
 }
