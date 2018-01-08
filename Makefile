@@ -11,5 +11,8 @@ composer.phar:
 vendor: composer.phar
 	$(COMPOSER) install
 
+test:
+	cd ./application/tests/ && ../../vendor/bin/phpunit
+
 vendor/update: composer.phar
 	$(COMPOSER) update
