@@ -2,12 +2,8 @@
 
 class TestCase extends CIPHPUnitTestCase
 {
-    public $CI;
-
-    public function setUp()
+    protected function setUp()
     {
-        parent::setUp();
-
-        $this->CI =& get_instance();
+        $this->resetInstance();
     }
 }
