@@ -11,16 +11,22 @@ services:
       - 10080:80
     links:
       - mysql
+      - smtp-server
     depends_on:
       - mysql
+      - smtp-server
     working_dir: /var/www/
   mysql:
-    image: mysql
+    image: mysql:5.6
     volumes:
       - ./etc/mysql/conf.d:/etc/mysql/conf.d
       - db:/var/lib/mysql
     environment:
       - TZ=Asia/Tokyo
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+  smtp-server:
+    image: schickling/mailcatcher
+    ports:
+      - "1080:1080"
 volumes:
   db:
