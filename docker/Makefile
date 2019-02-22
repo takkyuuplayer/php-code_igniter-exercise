@@ -3,7 +3,7 @@ DOCKER_COMPOSE=$(shell which docker-compose)
 CONTAINER_NAME=code_igniter-exercise
 
 up:
-	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) up -d --build
 
 build:
 	$(DOCKER_COMPOSE) build
